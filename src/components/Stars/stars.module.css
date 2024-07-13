@@ -1,0 +1,9 @@
+.card-body-stars {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.u-clearfix {
+
+}
