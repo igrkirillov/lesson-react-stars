@@ -2,7 +2,7 @@ import React from 'react';
 import {Star} from "./Star";
 import styles from "./stars.module.css"
 
-export type StarsInfo = {
+export type StarsProps = {
     count: number
 }
 
@@ -14,7 +14,7 @@ function* starsArrayGenerator(count: number) {
     }
 }
 
-export function Stars(props: StarsInfo) {
+export function Stars(props: StarsProps) {
     const {count} = props;
     return (
         count && (count >= 1 || count <= 5)
