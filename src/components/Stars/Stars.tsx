@@ -9,7 +9,7 @@ export type StarsInfo = {
 function* starsArrayGenerator(count: number) {
     let counter = count || 0;
     while(counter >= 1) {
-        yield 1;
+        yield counter;
         --counter;
     }
 }
@@ -19,7 +19,7 @@ export function Stars(props: StarsInfo) {
     return (
         count && (count >= 1 || count <= 5)
             ? <ul className={[styles["card-body-stars"], styles[".u-clearfix"]].join(" ")}>
-                {Array.from(starsArrayGenerator(count)).map(() => <Star></Star>)}
+                {Array.from(starsArrayGenerator(count)).map((key) => <Star key={key}></Star>)}
                 </ul>
             : <div></div>
     );
